@@ -37,6 +37,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onStop() {
+        super.onStop();
+        Toast.makeText(MainActivity.this, "Toast onStop!",Toast.LENGTH_LONG).show();
+        Log.v("MainActivity","onStop");
+    }
+
+    @Override
     protected void onDestroy() {
         super.onDestroy();
         Toast.makeText(MainActivity.this, "Toast onDestroy!",Toast.LENGTH_LONG).show();
